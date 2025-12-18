@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <div class="d-flex justify-content-between mb-3">
+      <h4>Events</h4>
+      <a href="/event/new" class="btn btn-primary btn-sm">+ Add Event</a>
+    </div>
+
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Start</th>
+        <th>End</th>
+      </tr>
+      {% for e in events %}
+      <tr>
+        <td>{{ e.title }}</td>
+        <td>{{ e.start_time }}</td>
+        <td>{{ e.end_time }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

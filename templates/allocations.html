@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4>Allocate Resource</h4>
+
+    <form method="post" class="row g-2 mb-3">
+      <div class="col-md-4">
+        <select class="form-select" name="event_id">
+          {% for e in events %}
+          <option value="{{ e.id }}">{{ e.title }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <select class="form-select" name="resource_id">
+          {% for r in resources %}
+          <option value="{{ r.id }}">{{ r.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100">Allocate</button>
+      </div>
+    </form>
+
+    <table class="table table-striped">
+      <tr>
+        <th>Event</th>
+        <th>Resource</th>
+      </tr>
+      {% for a in allocations %}
+      <tr>
+        <td>{{ a.event.title }}</td>
+        <td>{{ a.resource.name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4>Resource Utilization Report</h4>
+
+    <form method="post" class="row g-2 mb-3">
+      <div class="col-md-3">
+        <input type="date" class="form-control" name="start">
+      </div>
+      <div class="col-md-3">
+        <input type="date" class="form-control" name="end">
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-dark w-100">Generate</button>
+      </div>
+    </form>
+
+    <table class="table table-bordered">
+      <tr>
+        <th>Resource</th>
+        <th>Total Hours</th>
+        <th>Upcoming</th>
+      </tr>
+      {% for r in report_data %}
+      <tr>
+        <td>{{ r.resource }}</td>
+        <td>{{ r.hours }}</td>
+        <td>{{ r.upcoming }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
