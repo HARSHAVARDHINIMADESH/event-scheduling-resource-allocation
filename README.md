@@ -28,8 +28,7 @@ and allocate shared resources such as rooms, instructors, and equipment.
    http://127.0.0.1:5000
 
 ## Demo Video
-PASTE YOUR VIDEO LINK HERE
-=======
-# event-scheduling-resource-allocation
+
+https://drive.google.com/file/d/1tvX60YCXd9Lq7r3oBW1QwSHPJn3BpUpJ/view?usp=sharing
 Flask Event Scheduling App
 >>>>>>> 6f985eed37945a7043c7e2aa8f104d84ab04b047
