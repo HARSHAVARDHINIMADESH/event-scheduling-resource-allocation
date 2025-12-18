@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Event Scheduling & Resource Allocation System
 
 This Flask-based web application allows organizations to schedule events
@@ -28,3 +29,7 @@ and allocate shared resources such as rooms, instructors, and equipment.
 
 ## Demo Video
 PASTE YOUR VIDEO LINK HERE
+=======
+# event-scheduling-resource-allocation
+Flask Event Scheduling App
+>>>>>>> 6f985eed37945a7043c7e2aa8f104d84ab04b047
